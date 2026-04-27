@@ -63,7 +63,9 @@ export function Header() {
           <div className="flex items-center gap-2">
             <a
               href={TEL}
-              className="hidden sm:inline-flex items-center gap-2 rounded-xl gradient-accent px-4 md:px-5 py-2.5 text-sm font-bold text-accent-foreground glow-orange animate-pulse-orange hover:scale-105 transition-transform"
+              className={`hidden sm:inline-flex items-center gap-2 rounded-xl gradient-accent px-4 md:px-5 py-2.5 text-sm font-bold text-accent-foreground glow-orange animate-pulse-orange hover:scale-105 transition-all duration-300 ${
+                scrolled ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
+              }`}
             >
               <Phone className="w-4 h-4" strokeWidth={2.5} />
               {PHONE}
