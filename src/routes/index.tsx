@@ -1,26 +1,56 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { Stats } from "@/components/site/Stats";
+import { Urgency } from "@/components/site/Urgency";
+import { Services } from "@/components/site/Services";
+import { HowItWorks } from "@/components/site/HowItWorks";
+import { Reviews } from "@/components/site/Reviews";
+import { Coverage } from "@/components/site/Coverage";
+import { Trust } from "@/components/site/Trust";
+import { FAQ } from "@/components/site/FAQ";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+import { FloatingCall } from "@/components/site/FloatingCall";
+import { Toaster } from "@/components/ui/sonner";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Instalator București 24/7 — Urgențe Non-Stop | 0726.001.233" },
+      {
+        name: "description",
+        content:
+          "Instalator non-stop în București & Ilfov. Urgențe rezolvate în 5–45 min. Autorizat ANRE & ISCIR. Garanție 2–5 ani. Sună: 0726.001.233",
+      },
+      {
+        property: "og:image",
+        content: "/og-cover.jpg",
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground antialiased pb-24 sm:pb-0">
+      <Header />
+      <main>
+        <Hero />
+        <Stats />
+        <Urgency />
+        <Services />
+        <HowItWorks />
+        <Reviews />
+        <Coverage />
+        <Trust />
+        <FAQ />
+        <Contact />
+      </main>
+      <Footer />
+      <FloatingCall />
+      <Toaster />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
