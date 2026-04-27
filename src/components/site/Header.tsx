@@ -66,7 +66,7 @@ export function Header() {
               className="hidden sm:inline-flex items-center gap-2 rounded-xl gradient-accent px-4 md:px-5 py-2.5 text-sm font-bold text-accent-foreground glow-orange animate-pulse-orange hover:scale-105 transition-transform"
             >
               <Phone className="w-4 h-4" strokeWidth={2.5} />
-              <span className="hidden md:inline">Sună Acum –</span> {PHONE}
+              {PHONE}
             </a>
             <button
               onClick={() => setOpen(!open)}
