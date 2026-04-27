@@ -91,7 +91,7 @@ export function Reviews() {
 
       <div className="container mx-auto px-4 text-center mt-12">
         <a
-          href="https://www.google.com/search?q=Instalator+Bucuresti+24/7"
+          href="https://www.google.com/search?q=instalator+crangasi&oq=instalator+crangasi&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiABBiiBDIHCAIQABjvBTIHCAMQABjvBTIKCAQQABiABBiiBDIGCAUQRRg9MgYIBhBFGDwyBggHEEUYPNIBCDMwMjhqMGo0qAIDsAIB8QX0jsqmvXCISQ&sourceid=chrome&ie=UTF-8"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-xl glass-strong px-6 py-3 text-sm font-semibold hover:bg-white/10 transition"
