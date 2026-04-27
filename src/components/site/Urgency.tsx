@@ -10,42 +10,48 @@ const items = [
 
 export function Urgency() {
   return (
-    <section id="urgente" className="py-16 md:py-24 relative">
+    <section id="urgente" className="py-16 md:py-20 relative">
       <div className="container mx-auto px-4">
-        <div className="relative rounded-3xl overflow-hidden">
-          <div className="absolute inset-0 gradient-urgent animate-gradient opacity-95" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,oklch(1_0_0/0.15),transparent_50%)]" />
-          <div className="relative p-8 md:p-14 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-black/30 backdrop-blur px-4 py-1.5 mb-6">
-              <AlertTriangle className="w-4 h-4 text-white animate-pulse" />
-              <span className="text-xs font-bold tracking-widest text-white">URGENȚĂ</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
-              🚨 Ai o urgență acum?
-            </h2>
-            <p className="mt-4 text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Suntem disponibili <strong>NON-STOP</strong>. Intervenție în 5 până la 45 de minute.
-            </p>
+        <div className="relative rounded-3xl overflow-hidden border border-white/10 glass-strong">
+          {/* Subtle accent glow instead of bright animated gradient */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,oklch(0.65_0.24_30/0.18),transparent_55%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_80%,oklch(0.62_0.22_255/0.12),transparent_55%)]" />
 
-            <a
-              href="tel:0726001233"
-              className="mt-8 inline-flex items-center gap-3 rounded-2xl bg-white text-urgent px-8 py-5 text-lg md:text-xl font-extrabold animate-pulse-ring hover:scale-105 transition-transform shadow-2xl"
-            >
-              <Phone className="w-6 h-6" strokeWidth={2.5} />
-              0726.001.233 — Apelează ACUM
-            </a>
+          <div className="relative p-8 md:p-12">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="text-left">
+                <div className="inline-flex items-center gap-2 rounded-full border border-urgent/40 bg-urgent/10 px-3 py-1.5 mb-5">
+                  <AlertTriangle className="w-3.5 h-3.5 text-urgent" />
+                  <span className="text-[11px] font-bold tracking-widest text-urgent">URGENȚĂ</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight">
+                  Ai o urgență acum?
+                </h2>
+                <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-xl">
+                  Suntem disponibili <strong className="text-foreground">non-stop</strong>. Intervenție în 5 până la 45 de minute.
+                </p>
 
-            <ul className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-3xl mx-auto text-left">
-              {items.map((it) => (
-                <li
-                  key={it}
-                  className="flex items-center gap-2 rounded-xl bg-black/25 backdrop-blur px-4 py-3 text-white"
+                <a
+                  href="tel:0726001233"
+                  className="mt-6 inline-flex items-center gap-2.5 rounded-2xl gradient-accent text-accent-foreground px-6 py-4 text-base md:text-lg font-bold glow-orange hover:scale-105 transition-transform"
                 >
-                  <Check className="w-5 h-5 shrink-0 text-white" strokeWidth={3} />
-                  <span className="text-sm font-medium">{it}</span>
-                </li>
-              ))}
-            </ul>
+                  <Phone className="w-5 h-5" strokeWidth={2.5} />
+                  0726.001.233
+                </a>
+              </div>
+
+              <ul className="grid sm:grid-cols-2 gap-2.5">
+                {items.map((it) => (
+                  <li
+                    key={it}
+                    className="flex items-center gap-2.5 rounded-xl border border-white/5 bg-white/[0.03] px-4 py-3"
+                  >
+                    <Check className="w-4 h-4 shrink-0 text-success" strokeWidth={3} />
+                    <span className="text-sm font-medium text-foreground/90">{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

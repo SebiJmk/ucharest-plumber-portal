@@ -39,9 +39,9 @@ function Index() {
       <main>
         <Hero />
         <Stats />
-        <Urgency />
         <Services />
         <HowItWorks />
+        <Urgency />
         <Reviews />
         <Coverage />
         <Trust />
