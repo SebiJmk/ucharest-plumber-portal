@@ -79,7 +79,7 @@ export function Header() {
         </div>
 
         {open && (
-          <div className="lg:hidden mt-2 glass-strong rounded-2xl p-4 animate-fade-up">
+          <div className="lg:hidden mt-2 glass-strong backdrop-blur-2xl bg-background/70 border border-white/10 rounded-2xl p-4 animate-fade-up shadow-2xl">
             <nav className="flex flex-col gap-1">
               {links.map((l) => (
                 <a
